@@ -1,7 +1,5 @@
 # 🔬 ResearchMind
 
-## 📌 Project Preview
-
 <div align="center">
   <img src="assets/ResearchMind1.png" alt="ResearchMind Dashboard Interface" width="420" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.3); margin-right: 10px;"/>
   <img src="assets/ResearchMind2.png" alt="ResearchMind Execution Pipeline" width="420" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.3);"/>
