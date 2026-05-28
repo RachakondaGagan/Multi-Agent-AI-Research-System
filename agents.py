@@ -46,3 +46,17 @@ Be detailed, factual and professional."""),
 ])
 writer_chain = write_prompt | llm | StrOutputParser()
 
+# Critic Chain 
+critic_prompt = chatPromptTemplate.from_messages([
+    ('system', 'You are a critical analyst. Evaluate the quality of research and writing.'),
+    ('human', """Evaluate the following research report based on:
+    - Depth of research (Did it cover key aspects of the topic?)
+    - Clarity and structure of writing
+    - Use of sources (Were the sources relevant and well-integrated?)
+
+    Report:
+    {report}
+        
+Provide a detailed critique with suggestions for improvement."""),
+])
+
