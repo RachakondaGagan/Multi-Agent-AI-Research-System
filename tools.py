@@ -36,4 +36,4 @@ def scrape_url(url: str) -> str:
     except Exception as e:
         return f"Could not scrape URL: {str(e)}"
 
-print(scrape_url.invoke("https://www.bbc.com/news/articles/c98r2qy5809o"))
+# print(scrape_url.invoke("https://www.bbc.com/news/articles/c98r2qy5809o"))
