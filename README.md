@@ -71,14 +71,33 @@ graph TD
 
 ---
 
-## 👥 Meet Your AI Research Team
+## 🧱 Core System Architecture
 
-| Agent | Technology | Core Functionality |
-| :--- | :--- | :--- |
-| **01. Web Search Agent** | `TavilyClient` | Scans live search indexes and groups primary resources. |
-| **02. Deep Document Scraper** | BeautifulSoup4 | Decomposes stylesheets and cleans navigation structures for deep content. |
-| **03. Principal Research Writer** | LangChain LLM | Synthesizes raw text feeds and drafts professional intelligence briefs. |
-| **04. Editorial Peer Critic** | LangChain LLM | Performs structured quality checks, issues score cards, and suggests enhancements. |
+We designed and engineered four core architectural blocks using state-of-the-art **LangChain** patterns:
+
+### 1. 🔍 Web Search Agent
+* **Pattern**: `create_react_agent` + `AgentExecutor`
+* **Core Tool**: `web_search` (Tavily Search API)
+* **Functionality**: Performs reasoning-driven live search queries, processes multiple links, and aggregates raw keyword results.
+
+### 2. 📄 Deep Scraper Agent
+* **Pattern**: `create_react_agent` + `AgentExecutor`
+* **Core Tool**: `scrape_url` (BeautifulSoup4 + Requests)
+* **Functionality**: Accesses raw URLs, strips boilerplate elements (stylesheets, javascript, navigation bars), and extracts plain-text body content for deep comprehension.
+
+### 3. ✍️ Principal Research Writer Chain
+* **Pattern**: Modern **LCEL (LangChain Expression Language)** Pipe Syntax:
+  ```python
+  writer_chain = write_prompt | llm | StrOutputParser()
+  ```
+* **Functionality**: Ingests the unified intelligence data feed (Search + Scraper output) and synthesizes a comprehensive, high-quality Markdown intelligence briefing.
+
+### 4. 🧐 Editorial Peer Critic Chain
+* **Pattern**: Modern **LCEL** Pipe Syntax:
+  ```python
+  critic_chain = critic_prompt | llm | StrOutputParser()
+  ```
+* **Functionality**: Reads the drafted intelligence report, performs quality validation checks, scores the briefing out of 10, and provides constructive feedback.
 
 ---
 
