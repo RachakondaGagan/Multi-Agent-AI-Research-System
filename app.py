@@ -62,13 +62,14 @@ html, body, [class*="css"] {
     -webkit-text-fill-color: transparent;
 }
 .brand-sub {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: #94A3B8;
-    max-width: 700px;
-    margin: 0.8rem auto 0;
-    line-height: 1.6;
-    text-align: center;
+    font-size: 1.08rem !important;
+    font-weight: 500 !important;
+    color: #94A3B8 !important;
+    max-width: 800px !important;
+    margin: 0.8rem auto 0 !important;
+    line-height: 1.65 !important;
+    text-align: center !important;
+    display: block !important;
 }
 
 /* ── Glassmorphic Panels ── */
@@ -290,10 +291,10 @@ if "topic" not in st.session_state:
 
 # ── Hero Branding Header ────────────────────────────────────────────────────────
 st.markdown("""
-<div class="brand-container">
-    <div class="brand-eyebrow">Advanced multi-agent intelligence briefing system</div>
-    <div class="brand-title">Research<span>Mind</span></div>
-    <p class="brand-sub">
+<div class="brand-container" style="text-align: center !important; width: 100% !important; display: block !important;">
+    <div class="brand-eyebrow" style="text-align: center !important;">Advanced multi-agent intelligence briefing system</div>
+    <div class="brand-title" style="text-align: center !important;">Research<span>Mind</span></div>
+    <p class="brand-sub" style="text-align: center !important; font-weight: 500 !important; margin: 0.8rem auto 0 !important; max-width: 800px !important;">
         Four specialized AI agents collaborate — searching, scraping, writing, and critiquing — to deliver a polished research report on any topic.
     </p>
 </div>
