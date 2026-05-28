@@ -19,9 +19,9 @@
 ## 📌 Project Preview
 
 <div align="center">
-  <!-- Place your stunning SaaS dashboard screenshot here -->
-  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="ResearchMind Dashboard Preview" width="850" style="border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3);"/>
-  <p><em>Premium obsidian-themed SaaS Workspace displaying real-time dynamic agent executions.</em></p>
+  <img src="assets/ResearchMind1.png" alt="ResearchMind Dashboard Interface" width="420" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.3); margin-right: 10px;"/>
+  <img src="assets/ResearchMind2.png" alt="ResearchMind Execution Pipeline" width="420" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.3);"/>
+  <p><em>Obsidian-themed SaaS Workspace showing both the dashboard and the dynamic agent execution pipeline.</em></p>
 </div>
 
 ---
