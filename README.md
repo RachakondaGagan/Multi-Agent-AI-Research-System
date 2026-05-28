@@ -1,21 +1,5 @@
 # 🔬 ResearchMind
 
-<div align="center">
-
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.57-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![LangChain](https://img.shields.io/badge/LangChain-0.2-1C3C3A?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
-[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-Large-FF5E00?style=for-the-badge&logo=mistralai&logoColor=white)](https://mistral.ai)
-[![Tavily](https://img.shields.io/badge/Tavily-Search%20API-FF8C00?style=for-the-badge&logo=googlechrome&logoColor=white)](https://tavily.com)
-
-**An advanced, multi-agent AI research briefing dashboard that collaborates sequentially to generate professional, peer-reviewed intelligence briefings on any topic.**
-
-[Explore Features](#-key-features) • [Orchestration Flow](#-agentic-orchestration-flow) • [Quick Start](#-quick-start) • [Deployment](#-cloud-deployment)
-
-</div>
-
----
-
 ## 📌 Project Preview
 
 <div align="center">
@@ -37,6 +21,22 @@
 ---
 
 ## 🛠️ Tech Stack
+
+<div align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.57-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![LangChain](https://img.shields.io/badge/LangChain-0.2-1C3C3A?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
+[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-Large-FF5E00?style=for-the-badge&logo=mistralai&logoColor=white)](https://mistral.ai)
+[![Tavily](https://img.shields.io/badge/Tavily-Search%20API-FF8C00?style=for-the-badge&logo=googlechrome&logoColor=white)](https://tavily.com)
+
+**An advanced, multi-agent AI research briefing dashboard that collaborates sequentially to generate professional, peer-reviewed intelligence briefings on any topic.**
+
+[Explore Features](#-key-features) • [Orchestration Flow](#-agentic-orchestration-flow) • [Quick Start](#-quick-start) • [Deployment](#-cloud-deployment)
+
+</div>
+
+---
 
 - **Frontend & Interface**: [Streamlit](https://streamlit.io) (Custom HSL Dark Mode CSS + Glassmorphism UI Layouts)
 - **Agent Orchestration**: [LangChain Ecosystem](https://github.com/langchain-ai/langchain)
