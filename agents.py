@@ -19,6 +19,11 @@ def build_search_agent():
         tools = [web_search]
     )
 
-
+# Agent 2
+def build_scrape_agent():
+    return = create_agent(
+        model = llm,
+        tools = [scrape_url]
+    )
 
 
