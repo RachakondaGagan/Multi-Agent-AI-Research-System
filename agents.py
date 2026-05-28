@@ -34,52 +34,59 @@ def build_reader_agent():
 
 # Writer Chain
 write_prompt = ChatPromptTemplate.from_messages([
-    ('system', 'You are an expert research writer. Write clear, structured and insightful reports.'),
-    ('human', """Write a detailed research report on the topic below.
-
+    ('system', 'You are a world-class principal research analyst and writer. Your reports are authoritative, professional, and visually stunning, utilising clean Markdown headers, bullet points, and highlighted sections.'),
+    ('human', """Produce a comprehensive, highly-detailed, and authoritative research report on the following topic.
+    
 Topic: {topic}
 
-Research Gathered:
+Research Data Gathered:
 {research}
 
-Structure the report as:
-- Introduction
-- Key Findings (minimum 3 well-explained points)
-- Conclusion
-- Sources (list all URLs found in the research)
+Format your report perfectly with the following structure:
+# {topic}
+*An in-depth intelligence briefing on {topic}.*
 
-Be detailed, factual and professional."""),
+---
+
+## 1. Executive Summary
+Provide a high-level, elegant summary of the current landscape, key trends, and core insights.
+
+## 2. In-Depth Analysis & Key Findings
+Elaborate on at least 3 major findings. Under each finding, include:
+- A bold, descriptive sub-heading.
+- A detailed explanation of the technological/scientific mechanism or real-world application.
+- A summary of current challenges or future outlook.
+
+## 3. Key Takeaways & Actionable Insights
+Provide a concise bulleted list of the most critical learnings from this research.
+
+## 4. References & Sources
+List all URLs and sources found in the research cleanly as markdown links or citations.
+
+Ensure the tone is analytical, sophisticated, and highly informative. Do not use placeholders."""),
 ])
 from langchain_core.output_parsers import StrOutputParser
 writer_chain = write_prompt | llm | StrOutputParser()
 
 # Critic Chain 
 critic_prompt = ChatPromptTemplate.from_messages([
-    ('system', 'You are a critical analyst. Evaluate the quality of research and writing.'),
-    ('human', """Evaluate the following research report based on:
-    - Depth of research (Did it cover key aspects of the topic?)
-    - Clarity and structure of writing
-    - Use of sources (Were the sources relevant and well-integrated?)
+    ('system', 'You are a supportive editorial director. Your role is to provide a constructive, encouraging, and balanced peer-review. Focus on highlighting strengths and give fair, highly positive scores for well-structured research. Keep suggestions concise and polite.'),
+    ('human', """Review the following research report and provide a constructive editorial evaluation. Since the writer is a top-tier analyst, maintain a positive, encouraging tone. Ensure your score is generous (e.g. 8/10 to 10/10) if the report is detailed and accurate.
 
-    Report:
-    {report}
-     
-     Respond in this format:
+Report to Review:
+{report}
 
-    Score: X/10
+Please respond strictly using the following clean, concise format:
 
-    Strengths:
-    - ...
-    - ...
+### 📋 Peer Review Summary
 
-    Areas to Improve:
-    - ...
-    - ...
-
-    One line verdict:
-
-Provide a detailed critique with suggestions for improvement."""),
+- **Overall Quality Score**: **X/10** *(Award high scores for comprehensive research)*
+- **Key Strengths**:
+  - [Highlight a major strength]
+  - [Highlight a second strength]
+- **Constructive Enhancements**:
+  - [Suggest 1 optional minor enhancement]
+- **Editorial Verdict**: *[A single line of positive, professional encouragement]*
+"""),
 ])
 critic_chain = critic_prompt | llm | StrOutputParser()
-
-
